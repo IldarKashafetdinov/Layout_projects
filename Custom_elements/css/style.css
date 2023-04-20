@@ -1,0 +1,377 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  padding: 70px 65px 110px 65px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  background-color: #424242;
+}
+
+.checkbox {
+  margin-right: auto;
+  height: max-content;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.checkbox__inner {
+  padding: 21px 30px 30px 30px;
+}
+
+.checkbox__heading {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.checkbox__text {
+  font-weight: 400;
+  color: #333;
+}
+
+.checkbox__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.checkbox__default {
+  display: none;
+}
+
+.checkbox__label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+.checkbox__text + .checkbox__custom {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
+.checkbox__text + .checkbox__custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .3s ease-in-out;
+}
+
+.checkbox__text:checked + .checkbox__custom {
+  border-color: #CCB26E;
+}
+
+.checkbox__text:checked + .checkbox__custom::before {
+  background-image: url('../img/custom-checkbox.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+
+.select__content {
+  height: max-content;
+  width: 13%;
+  margin-right: auto;
+}
+
+.choices {
+  position: relative;
+  border-radius: 10px;
+}
+
+.is-focused.is-open .choices__inner {
+  border: 2px solid #CCB26E;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-sizing: border-box;
+}
+
+
+.choices__list.choices__list--dropdown.is-active {
+  border: 2px solid #CCB26E;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.choices__item {
+  font-weight: 400;
+  color: #333;
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+  padding: 20px 0 0 15px;
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable:last-child {
+  padding-bottom: 20px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: inherit;
+}
+
+.choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+
+.choices__placeholder {
+  font-size: 14px;
+  opacity: 1;
+  color: #333;
+}
+
+.choices::after {
+  opacity: 0;
+}
+
+
+.choices::before {
+  content: '';
+  position: absolute;
+  bottom: 41%;
+  left: 83%;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #666;
+  border-right: 1.5px solid #666;
+  transform: rotate(135deg);
+  transition: all .3s ease-in-out;
+}
+
+.choices.is-focused.is-open::before {
+  bottom: 36%;
+  border-top: 1.5px solid #CCB26E;
+  border-right: 1.5px solid #CCB26E;
+  transform: rotate(-45deg);
+}
+
+
+.map {
+  margin-bottom: 60px;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+[class*="copyrights-pane"],
+[class*="controls-pane"] {
+  visibility: hidden;
+}
+
+
+.scroll {
+  margin-right: auto;
+  padding: 20px 0 0 30px;
+  width: 399px;
+  height: max-content;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.custom__scroll {
+  margin-right: auto;
+  padding-right: 30px;
+  height: 290px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #CCB26E;
+  border-radius: 5px;
+}
+
+.simplebar-content-wrapper {
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
+}
+
+.scroll .simplebar-track.simplebar-vertical {
+  right: 6px;
+}
+
+
+.form-container {
+  margin-right: 250px;
+  padding: 38px 30px;
+  height: max-content;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.form {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form__input {
+  padding-left: 20px;
+  margin-bottom: 31px;
+  width: 380px;
+  height: 60px;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  color: green;
+}
+
+.form__btn {
+  padding: 18px 53px;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #CCB26E;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.form__btn:hover {
+  color: #CCB26E;
+  background-color: #000;
+  outline: 2px solid #CCB26E;
+}
+
+.form__input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #CCB26E;
+}
+
+.form__input:focus-visible::placeholder,
+.form__input:active::placeholder {
+  color: transparent;
+}
+
+.form__input:focus-visible,
+.form__input:active {
+  font-weight: 400;
+  font-size: 16px;
+  outline: none;
+  outline: 3px solid #CCB26E;
+  color: #CCB26E;
+}
+
+.form__req {
+  flex-direction: column-reverse;
+}
+
+.js-validate-error-label {
+  margin-left: 30px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.form__input.js-validate-error-field {
+  outline: 3px solid gray;
+}
+
+
+
+.tooltip-container {
+  padding: 20px 78px 20px 27px;
+  background-color: #fff;
+  height: max-content;
+  border-radius: 10px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  width: 268px;
+  height: 120px;
+  color: #333;
+}
+
+.tooltip-cont {
+  position: relative;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.tooltip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.tooltip-1::before {
+  content: "Глава 2, страница 176";
+  position: absolute;
+
+  transform: translate(calc(-100%/2 + 8px), calc(-100% - 10px));
+  max-width: max-content;
+  width: 100vh;
+  background-color: #424242;
+  color: #fff;
+  border-radius: 10px;
+
+  padding: 7px 15px;
+  box-sizing: border-box;
+  display: none;
+  word-wrap: break-word;
+}
+
+.tooltip-1:after {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-top: 10px solid #424242;
+  display: none;
+}
+
+.tooltip-1:hover::before,
+.tooltip-1:hover::after {
+  display: inline-block;
+}
+
+.tooltip_icon:hover path {
+  fill: #CCB26E;
+}
