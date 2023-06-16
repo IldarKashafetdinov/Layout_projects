@@ -4,7 +4,7 @@
 Макет адаптивной(@media) Pixel Perfect верстки c использованием JavaScript(Swiper, аккордеон, табы, бургер-меню, поиск). Обеспечен кроссбраузерностью. Реализована возможность “хождения” по сайту с клавиатуры и возможность пользования сойтом с помощью скринридера NVDA(VoiceOver).    
 
 Ссылка на макет:<br>
-<p align="center" style="color: red">http://s651596.smrtp.ru</p>
+<p align="center" style="color: red;">http://s651596.smrtp.ru</p>
 
 ---
 
